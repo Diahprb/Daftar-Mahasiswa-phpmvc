@@ -18,11 +18,10 @@ class Mahasiswa_model {
 
         public function getMahasiswaById($id)
         {
-            $this->db->query('SELECT * FROM ' . $this->table . ' WHERE id=:id'
-        );
+            $this->db->query('SELECT * FROM ' . $this->table . ' WHERE id=:id');
         $this->db->bind('id', $id);
         return $this->db->single();
-        }
+        }   
 
         public function tambahDataMahasiswa($data)
         {
